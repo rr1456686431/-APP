@@ -1,0 +1,126 @@
+.m_container {
+  width: 100%;
+  min-width: 320px;
+  margin: 0 auto;
+}
+.m_search {
+  width: 100%;
+  height: 1.33rem;
+  background-color: #fff;
+  padding: .27rem;
+}
+.m_search .left {
+  height: .8rem;
+  overflow: hidden;
+  border-radius: .8rem;
+}
+.m_search .left input {
+  width: 100%;
+  height: 100%;
+  background-color: #F1F1F1;
+  padding: 0 .53rem;
+  font-size: .35rem;
+}
+.m_search .right {
+  float: right;
+  height: .8rem;
+  width: 1.71rem;
+  border-radius: .8rem;
+  background-color: #FF841D;
+  color: #fff;
+  line-height: .8rem;
+  text-align: center;
+  margin-left: .13rem;
+  font-size: .21rem;
+}
+.m_footer {
+  height: .67rem;
+  width: 100%;
+  margin-top: .67rem;
+}
+.m_footer ul {
+  border-top: .01rem solid #ccc;
+  border-bottom: .01rem solid #ccc;
+}
+.m_footer ul li {
+  float: left;
+  height: .8rem;
+  width: 33.33%;
+}
+.m_footer ul li a {
+  display: block;
+  font-size: .4rem;
+  height: .8rem;
+  line-height: .8rem;
+  text-align: center;
+  border-right: .01rem solid #ccc;
+}
+.m_footer ul .top {
+  position: relative;
+  padding-left: .4rem;
+}
+.m_footer ul .top::before {
+  content: '';
+  width: .4rem;
+  height: .4rem;
+  display: block;
+  position: absolute;
+  top: .2rem;
+  left: .6rem;
+  background: url(../images/top.jpg) no-repeat;
+  background-size: .4rem .4rem;
+}
+.m_footer .footer {
+  padding: .47rem 0;
+  width: 100%;
+  text-align: center;
+}
+.m_footer .footer .left {
+  color: red;
+  font-size: .33rem;
+}
+.m_footer .footer .center {
+  font-size: .33rem;
+}
+.m_footer .footer .right {
+  font-size: .33rem;
+  color: #51504C;
+}
+.m_footer p {
+  font-size: .35rem;
+  color: #51504C;
+}
+.more {
+  width: 100%;
+  padding: .27rem;
+}
+.more a {
+  display: block;
+  width: 100%;
+  height: .8rem;
+  border: .01rem solid #ccc;
+  border-radius: .07rem;
+  line-height: .8rem;
+  text-align: center;
+  font-size: .36rem;
+}
+.move {
+  display: none;
+}
+.page {
+  background-color: #fff;
+  padding-top: .27rem;
+}
+.page span {
+  width: 2.1rem;
+  height: .93rem;
+  border: 1px solid #ccc;
+  display: inline-block;
+  font-size: .4rem;
+  line-height: .93rem;
+  text-align: center;
+  margin: 0 .53rem;
+}
+.page .option {
+  border: none;
+}

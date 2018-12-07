@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/couponproduct.css">
+    <link rel="stylesheet" href="lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <title>肯德基优惠券</title>
+</head>
+
+<body>
+
+    <!-- 模态框 -->
+    <div class="box">
+        <div class="banner">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"> <a href="#"> <img src="images/img/banner1.jpg" alt=""></a></div>
+                </div>
+                <!-- 如果需要导航按钮 -->
+                <div class="swiper-button-prev swiper-button-white"></div>
+                <div class="swiper-button-next swiper-button-white"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="m_container">
+        <!-- 头部 -->
+        <div class="m_header clearfix">
+            <a href="index.html"><i class="fa fa-chevron-left"></i></a>
+            <div class="header ">优惠券</div>
+        </div>
+
+        <!-- p -->
+        <div class="text">--点餐前出示手机中的优惠券，即可享受优惠--</div>
+
+        <!-- 产品 -->
+        <div class="product">
+            <!-- 坑 -->
+            <div class="item clearfix">
+                <div class="img fl">
+                    <img src="images/productctrl.jpg" alt="">
+                </div>
+                <div class="info">
+                    <p>肯德基肯德基肯德基肯德基肯德基肯德基肯德基肯德基肯德德基肯德基肯德基肯德基肯德基肯德基肯德基肯德基肯基</p>
+                    <div class="price">￥28</div>
+                    <i></i>
+                </div>
+                <div class="time">有效期至</div>
+            </div>
+
+        </div>
+
+        <!-- 底部 -->
+        <div class="m_footer">
+            <ul class="clearfix">
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
+                <li class="top"><a href="#" id="#backBtn">返回顶部</a></li>
+            </ul>
+            <div class="footer">
+                <div>
+                    <span class="left">手机APP下载</span>
+                    <span class="center">慢慢买手机版</span>
+                    <span class="right">--掌上比价平台</span>
+                </div>
+                <p>m.maimaimaibuy.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 产品坑 -->
+    <script type="text/html" id="productTpl">
+        {{each result v i }}
+        <div class="item clearfix" data-couponId="{{v.couponId}}">
+            <div class="img fl">
+                {{@v.couponProductImg}}
+            </div>
+            <div class="info">
+                <p>{{v.couponProductName}}</p>
+                <div class="price">{{v.couponProductPrice}}</div>
+                <i data-couponProductId="{{v.couponProductId}}" id="btn"></i>
+            </div>
+            <div class="time">{{v.couponProductTime}}</div>
+        </div>
+        {{/each}}
+    </script>
+
+    <!-- banner填 -->
+    <script type="text/html" id="bannerTpl">
+        {{each result v i }}
+        <div class="swiper-slide" data-couponId="{{v.couponId}}"> <a href="#">{{@v.couponProductImg}}</a></div>
+
+        {{/each}}
+    </script>
+
+    <script src="lib/jquery/jquery-1.12.4.js"></script>
+    <script src="lib/flexible/flexible.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/couponproduct.js"></script>
+    <script src="lib/swiper/js/swiper.min.js"></script>
+
+    <script>
+        // 参数1：轮播图的容器
+
+        window.onload = function () {
+            new Swiper('.swiper-container', {
+                // 设置动画的速度
+                // speed: 1000,
+                // 自动播放
+                // autoplay: {
+                //     delay: 1000,
+                //     disableOnInteraction: false
+                // },
+                autoplay: true,//可选选项，自动滑动
+                loop: true,
+                effect: 'slide',
+                // 如果需要前进后退按钮
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                observer: true, //修改swiper自己或子元素时，自动初始化swiper
+                observeParents: true, //修改swiper的父元素时，自动初始化swiper
+                             
+            })
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+// 公共类
+// 头部
+.m_container {
+
+    // 只满足移动端，pc端宽度有设置
+    // width: 100%;
+    // max-width: 750px;
+    // min-width: 320px;
+    // margin: 0 auto;
+
+    // 适用于pc端
+    width: 100%;
+    min-width: 320px;
+    margin: 0 auto;
+    
+}
+
+
+// 搜索区
+.m_search {
+    width: 100%;
+    height: 1.33rem;
+    background-color: #fff;
+    padding: .27rem;
+    .left {
+        height: .8rem;
+        overflow: hidden;
+        border-radius: .8rem;
+        input {
+            width: 100%;
+            height: 100%;
+            background-color: #F1F1F1;
+            padding: 0 .53rem;
+            font-size: .35rem;
+        }
+    }
+    .right {
+        float: right;
+        height: .8rem;
+        width: 1.71rem;
+        border-radius: .8rem;
+        background-color: #FF841D;
+        color: #fff;
+        line-height: .8rem;
+        text-align: center;
+        margin-left: .13rem;
+        font-size: .21rem;
+    }
+}
+// 底部
+.m_footer{
+    height: .67rem;
+    width: 100%;
+    margin-top: .67rem;
+    ul{
+        border-top: .01rem solid #ccc;
+        border-bottom: .01rem solid #ccc;
+
+        
+        
+        li{
+            float: left;
+            height: .8rem;
+            width: 33.33%;
+          
+            a{
+                display:block;
+                font-size: .4rem;
+                height: .8rem;
+                line-height: .8rem;
+                text-align: center;
+                border-right: .01rem solid #ccc;
+                
+            }
+            
+        }
+        .top{
+            position: relative;
+            padding-left: .4rem;
+        }
+      .top::before{
+          content:'';
+          width:  .4rem;
+          height: .4rem;
+          display:block;
+          position: absolute;
+          top: .2rem;
+          left:.6rem;
+          background: url(../images/top.jpg) no-repeat ;
+          background-size: .4rem .4rem;
+      }
+    }
+    .footer{
+        padding: .47rem 0;
+        width: 100%;
+       
+        text-align: center;
+        .left{
+            color:red;
+            font-size: .33rem;
+        }
+        .center{
+            font-size: .33rem;
+
+        }
+        .right{
+            font-size: .33rem;
+            color:#51504C;
+        }
+    }
+    p{
+        font-size: .35rem;
+        color:#51504C;
+
+    }
+}
+// 更多
+.more{
+    width: 100%;
+  
+    padding: .27rem;
+    a{
+        display:block;
+        width: 100%;
+        height: .8rem;
+        border: .01rem solid #ccc;
+        border-radius: .07rem;
+        line-height: .8rem;
+        text-align:center;
+        font-size:  .36rem;
+    }
+}
+// 切换的公共类
+.move{
+    display: none;
+}
+
+
+
+// 分页
+.page{
+    background-color: #fff;
+    padding-top: .27rem;
+    span{
+        width: 2.1rem;
+        height: .93rem;
+        border: 1px solid #ccc;
+        display:inline-block;
+        font-size: .4rem;
+        line-height: .93rem;
+        text-align: center;
+        margin:0 .53rem;
+    }
+    .option{
+        border:none;
+    }
+
+}

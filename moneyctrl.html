@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/moneyctrl.css">
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <title>商品列表</title>
+</head>
+
+<body>
+    <div class="m_container">
+        <!-- 头部 -->
+        <div class="m_header clearfix">
+            <a href="index.html"><i class="fa fa-chevron-left"></i></a>
+            <div class="header ">省钱控-最新优惠</div> 
+
+        </div>
+  
+        <!-- 超值折扣推荐 -->
+        <div class="m_product ">
+                <div class="product" id="product">
+                    <!-- 挖坑 -->
+                    
+                </div>
+                <div class="more">
+                    <a href="#">更多优惠信息>></a>
+                </div>
+            </div>
+
+        <!-- 分页 -->
+        <div class="page ">
+            <span class="page1">上一页</span>
+            <span class="option">
+                <select name="select" id="dropDown">
+                <!-- 挖坑 -->
+                <option value="1">1/3</option>
+                <option value="2">2/3</option>
+                <option value="3">3/3</option>
+      
+            </select>
+        </span>
+            <span class="page2">下一页</span>
+        </div>
+
+
+
+        <!-- 底部 -->
+        <div class="m_footer">
+            <ul class="clearfix">
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
+                <li class="top"><a href="#" id="#backBtn">返回顶部</a></li>
+            </ul>
+            <div class="footer">
+                <div>
+                    <span class="left">手机APP下载</span>
+                    <span class="center">慢慢买手机版</span>
+                    <span class="right">--掌上比价平台</span>
+                </div>
+                <p>m.maimaimaibuy.com</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 填坑 -->
+    <script type="text/html" id="productTpl">
+        {{each result v i }}
+        <div class="item">
+            <a href="moneyproduct.html?productId={{v.productId}}" data-productId="{{v.productId}}">
+                <div class="img ">{{@ v.productImgSm }}</div>
+                <div class="info">
+                    <p class="top" >{{v.productName}}</p>
+                    <p class="price">{{v.productPinkage}}</p>
+                    <p class="bottom">{{v.productFrom}}|{{v.productTime}} <span class="fr">{{v.productComCount}}</span> </p>
+                </div>
+            </a>
+        </div>
+        {{/each}}
+    </script>
+
+    <script type="text/html" id="pageTpl">
+       
+       <% for(var i = 1; i <= pages; i++) {%>
+        <option value="{{i}}" {{ i== pageid ? 'selected="selected"' : ''}}> <%= i %> / <%= pages %></option>
+        <% } %>
+
+    
+    </script>
+
+        <script src="lib/jquery/jquery-1.12.4.js"></script>
+        <script src="lib/flexible/flexible.js"></script>
+        <script src="lib/artTemplate/template-web.js"></script>
+        <script src="js/common.js"></script>
+        <script src="js/moneyctrl.js"></script>
+
+
+</body>
+
+</html>

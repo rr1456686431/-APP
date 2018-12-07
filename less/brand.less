@@ -1,0 +1,224 @@
+@import 'base.less';
+@import 'normalize.less';
+@import 'common.less';
+
+body{
+    background-color: #fff;
+}
+// 头部
+.m_header {
+    width: 100%;
+    height: 1.33rem;
+    background-color: #FF841D;
+    padding: 0 .13rem;
+    .left {
+        width: 4.95rem;
+        height: .67rem;
+        background: url(../images/header_logo.png) no-repeat;
+        background-size:4.95rem .67rem;
+        margin-top: .33rem;
+    }
+    .right {
+        width: .91rem;
+        height: .91rem;
+        background: url(../images/header_app.png ) no-repeat;
+        background-size: .91rem .91rem;
+        margin-top: .27rem;
+    }
+}
+
+
+// 导航
+.m_nav{
+    width: 100%;
+    background-color: #EDEDED;
+    height: 1rem;
+    padding:0 .27rem;
+    border-top: .01rem solid #ccc;
+    border-bottom: .01rem solid #ccc;
+    a{
+        line-height: 1rem;
+        font-size: .35rem;
+        display: inline-block;
+        height: 1rem;
+
+    }
+}
+
+// 标题
+.title{
+    // margin: .13rem;
+    height: 1rem;
+    line-height: 1rem;
+    background-color: #EEEEEE;
+    color:#862608;
+    font-size: .29rem;
+    font-weight: 700;
+    padding: 0 .27rem;
+    border: .01rem solid #ccc;
+
+}
+
+// 内容
+.nav{
+
+    li{
+        padding: .27rem;
+        border: .01rem solid #ccc;
+        position: relative;
+        
+
+        .img{
+            width: .53rem;
+            height: .53rem;
+            float: left;
+            text-align: center;
+            background-color: #C9C9C9;
+            span{
+                color:#fff;
+                font-size: .29rem;
+                line-height: .53rem;
+            }
+        }
+     
+        .info{
+            overflow: hidden;
+            padding-left: .27rem;
+            p{
+                font-size: .43rem;
+                height: .53rem;
+                line-height: .53rem;
+            }
+            .num{
+                font-size: .35rem;
+                height: .53rem;
+                line-height: .53rem;
+                color:#8C8B97;
+
+            }
+            
+        }
+        i{
+            position: absolute;
+            top:.47rem;
+            right: .13rem;
+            width: .29rem;
+            height: .47rem;
+            font-size: .53rem;
+            color:#666;
+        }
+    }
+    li:nth-child(1) .img{
+        background-color: red;
+    }
+    li:nth-child(2) .img{
+        background-color: #FF9211;
+    }
+    li:nth-child(3) .img{
+        background-color: #8ADF5B;
+    }
+}
+
+// 
+.content {
+    width: 100%;
+    background-color: #fff;
+}
+.item{
+    // height: 3.47rem;
+    width: 100%;
+    border-bottom:1px solid #ccc;
+    a{
+        width: 100%;
+        height: 100%;
+        display:block;
+        padding: .27rem;
+    }
+    .img{
+        float: left;
+        // padding: .27rem;
+        display: block;
+        img{
+            width: 2.67rem;
+            height: 2.67rem;
+        }
+    }
+    .info{
+        overflow: hidden;
+        height: 3.47rem;
+        padding-left: .4rem;
+        position: relative;
+        .top{
+            padding-top: .27rem;
+            font-size: .36rem;
+        }
+        .price{
+            font-size: .29rem;
+            color:red;
+            padding: .27rem 0;
+            display: block;
+        }
+        .bottom{
+            // padding-top: .4rem;
+            color:#ccc;
+            font-size: .24rem;
+        }
+        .start{
+            color: #FF841D;
+            position: absolute;
+            top: 1.6rem;
+            right:0;
+
+        }
+    }
+}
+.txt{
+    padding-top: .27rem;
+    font-size: .4rem;
+    color:#666;
+}
+.comment{
+    border: .01rem solid #e7e7e7;
+    background-color: #e7e7e7;
+    position: relative;
+
+    .com_title{
+        height: .93rem;
+        width: 100%;
+        padding:0 .27rem;
+        line-height: .93rem;
+        .user{
+            color:#436826;
+            font-size: .29rem;
+        }
+        .time{
+            color:#666;
+            font-size: .29rem;
+
+        }
+    }
+    .start{
+        color: #FF841D;
+        position: absolute;
+        top: 0;
+        left:1.33rem;
+    }
+    .text{
+        font-size: .35rem;
+        padding:.27rem;
+
+    }
+}
+.comment::before{
+    content:'';
+    height: 0;
+    width: 0;
+    position: absolute;
+    // 这是个三角形
+    border-bottom: .2rem solid #e7e7e7;
+    border-left: .2rem solid transparent;
+    border-right: .2rem solid transparent;
+    top: -0.2rem;
+    left: .93rem;
+    overflow: hidden;
+}

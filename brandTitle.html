@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/brandTitle.css">
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <title>品牌大全</title>
+</head>
+
+<body>
+    <div class="m_container">
+
+        <!-- 头部 -->
+        <div class="m_header clearfix" id="backBtn">
+            <div class="left fl"></div>
+            <div class="right fr"></div>
+        </div>
+
+        <!-- 搜索 -->
+        <div class="m_search">
+            <div class="right">搜索</div>
+            <div class="left"><input type="text" placeholder="请输入你想比价的商品"></div>
+        </div>
+        <!-- 导航 -->
+        <div class="m_nav mt_15">
+            <a href="index.html">首页></a>
+            <a href="category.html">全部分类></a>
+        </div>
+
+        <!-- 标题 -->
+        <div class="title">热门品牌排行</div>
+
+        <!-- 内容 -->
+        <div class="brandTitle">
+            <ul>
+                <li><a href="#">十大品牌</a><i class="fa fa-chevron-down"></i></li>
+                <li><a href="#">十大品牌</a><i class="fa fa-chevron-down"></i></li>
+                <li><a href="#">十大品牌</a><i class="fa fa-chevron-down"></i></li>
+                <li><a href="#">十大品牌</a><i class="fa fa-chevron-down"></i></li>
+                <li><a href="#">十大品牌</a><i class="fa fa-chevron-down"></i></li>
+                
+            </ul>
+        </div>
+
+
+        <!-- 底部 -->
+        <div class="m_footer">
+            <ul class="clearfix">
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
+                <li class="top"><a href="#" id="#backBtn">返回顶部</a></li>
+            </ul>
+            <div class="footer">
+                <div>
+                    <span class="left">手机APP下载</span>
+                    <span class="center">慢慢买手机版</span>
+                    <span class="right">--掌上比价平台</span>
+                </div>
+                <p>m.maimaimaibuy.com</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- product -->
+    <script type="text/html" id="titleTpl">
+        {{each result v i }}
+        <li><a href="brand.html?brandTitleid={{v.brandTitleId}}">{{v.brandTitle}}</a><i class="fa fa-chevron-down"></i></li>
+        {{/each}}
+    </script>
+
+    <script src="lib/jquery/jquery-1.12.4.js"></script>
+    <script src="lib/flexible/flexible.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/brandTitle.js"></script>
+
+</body>
+
+</html>

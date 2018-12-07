@@ -1,0 +1,115 @@
+@import 'base.less';
+@import 'normalize.less';
+@import 'common.less';
+
+// 头部
+.m_header {
+    width: 100%;
+    height: 1.33rem;
+    background-color: #FF841D;
+    position: relative;
+
+    // padding: 0 .13rem;
+    .header {
+        width: 100%;
+        height:1.33rem;
+        // margin-top: .33rem;
+        font-size: .57rem;
+        color:#fff;
+        text-align: center;
+        line-height: 1.33rem;
+        &::after {
+            content:"";
+            width: .91rem;
+            height: .91rem;
+            background: url(../images/header_app.png ) no-repeat;
+            background-size: .91rem .91rem;
+            position: absolute;
+            top: 15px;
+            right: .27rem;
+        }
+    }
+    a{
+        position: absolute;
+        top:0;
+        left:0;
+        width: 1.07rem;
+        height: 1.33rem;
+        padding: .4rem;
+        i{
+            font-size: .53rem;
+            color:#fff;
+        }
+    }
+}
+    // 超值优惠
+    .m_product {
+        width: 100%;
+        padding-top: .13rem;
+        background-color: #fff;
+        
+        .product {
+            width: 100%;
+            .item{
+                height: 3.47rem;
+                width: 100%;
+                border-bottom:1px solid #ccc;
+                a{
+                    width: 100%;
+                    height: 100%;
+                    display:block;
+                    padding: .27rem;
+                    .img{
+                        float: left;
+                        padding: .27rem;
+                        width: 2.67rem;
+                        height: 2.67rem;
+                        display: block;
+    
+                    }
+                    .info{
+                        overflow: hidden;
+                        height: 3.47rem;
+                        padding: .4rem;
+                        .top{
+                            padding-top: .27rem;
+                            font-size: .36rem;
+                        }
+                        .price{
+                            font-size: .29rem;
+                            color:#FF6613;
+                        }
+                        .bottom{
+                            padding-top: .4rem;
+                            color:#ccc;
+                            font-size: .27rem;
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

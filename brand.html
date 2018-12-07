@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/brand.css">
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <title>品牌大全</title>
+</head>
+
+<body>
+    <div class="m_container">
+
+        <!-- 头部 -->
+        <div class="m_header clearfix" id="backBtn">
+            <div class="left fl"></div>
+            <div class="right fr"></div>
+        </div>
+
+        <!-- 搜索 -->
+        <div class="m_search">
+            <div class="right">搜索</div>
+            <div class="left"><input type="text" placeholder="请输入你想比价的商品"></div>
+        </div>
+        <!-- 导航 -->
+        <div class="m_nav mt_15">
+            <a href="index.html">首页></a>
+            <a href="category.html">全部分类></a>
+        </div>
+
+        <!-- 标题 -->
+        <div class="title">消毒柜/洗碗机 哪个牌子好</div>
+
+        <!-- 导航 -->
+        <div class="nav">
+            <ul>
+                <li><a href="#">
+                        <div class="img">
+                            <span>1</span>
+                        </div>
+                        <div class="info">
+                            <p>美的消毒柜</p>
+                            <div class="num">30天全网销售：222222件</div>
+                        </div>
+                        <i class="icon fa fa-angle-right"></i>
+                    </a></li>
+            </ul>
+        </div>
+        <!-- 标题 -->
+        <div class="title">平板电视产品销量排行</div>
+        <!-- 内容 -->
+        <div class="content">
+            <!-- 坑 -->
+            <div class="item">
+                <a href="#">
+                    <div class="img "><img src="images/Thumb_2016060015515937123.png" alt=""></div>
+                    <div class="info">
+                        <p class="top">宇宙无敌电视机宇宙无敌电视机宇宙无敌电视机宇宙无敌敌电视机</p>
+                        <p class="price">￥1999.00</p>
+                        <p class="bottom">
+                            <span>报价（6）</span>
+                            <span> 评论（2286）</span>
+                        </p>
+                        <div class="start">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- 标题 -->
+        <div class="title">平板电视最新评论</div>
+        <!-- 产品 -->
+        <div class="product">
+            <div class="item">
+                <a href="#">
+                    <div class="img "><img src="images/Thumb_2016060015515937123.png" alt=""></div>
+                    <div class="info">
+                        <p class=txt>宇宙无敌电视机宇宙无敌电视机宇宙无敌电视机宇宙无敌敌电视机</p>
+                    </div>
+                </a>
+                <div class="comment">
+                    <div class="com_title clearfix">
+                        <div class="user fl">7575</div>
+                        <div class="time fr">2018</div>
+                        <div class="start">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        
+                    这已经是第二台乐视的，简单的评价下：操作系统的确很棒，非常方便，比家里其他品牌电视好不只几个档次；显示效果跟其他国产品牌没有太大区别，可能还要稍微逊色些；开机速度，还是一如既往的慢，当然家里另一台某创姓电视一样，所以不知道这是不是电视的通病；最后，谈谈性价比吧，记得乐视刚退出电视时，的确比其他电视价格低很多，但现在基本上没太大优势。我只所以再次选择乐视，只是我这个人不喜欢随随便便尝试新的东西。
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- 底部 -->
+        <div class="m_footer">
+            <ul class="clearfix">
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
+                <li class="top"><a href="#" id="#backBtn">返回顶部</a></li>
+            </ul>
+            <div class="footer">
+                <div>
+                    <span class="left">手机APP下载</span>
+                    <span class="center">慢慢买手机版</span>
+                    <span class="right">--掌上比价平台</span>
+                </div>
+                <p>m.maimaimaibuy.com</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 导航 -->
+    <script type="text/html" id="titleTpl">
+        {{each result v i }}
+        <li><a href="brandTitle.html?categoryid={{v.categoryId}}&pageid={{v.pageId}}">
+                <div class="img">
+                    <span>{{i+1}}</span>
+                </div>
+                <div class="info">
+                    <p>{{v.brandName}}</p>
+                    <div class="num">{{v.brandInfo}}</div>
+                </div>
+                <i class="icon fa fa-angle-right"></i>
+            </a></li>
+        {{/each}}
+    </script>
+
+    <!-- 内容 -->
+    <script type="text/html" id="contentTpl">
+        {{each result v i }}
+        <div class="item" data-productid="{{v.productId}}">
+            <a href="bijia.html?productid={{v.productId}}" >
+                <div class="img ">{{@v.productImg}}</div>
+                <div class="info">
+                    <p class="top">{{v.productName}}</p>
+                    <p class="price">{{v.productPrice}}</p>
+                    <p class="bottom"> 
+                        <span>{{v.productQuote}}</span>
+                        <span> {{v.productCom}}</span>
+                    </p>
+                    <div class="start">
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {{/each}}
+    </script>
+
+
+    <!-- 产品 -->
+    <script type="text/html" id="productTpl">
+        {{each result v i }}
+         <div class="item">
+                <a href="#">
+                    <div class="img "><img src="{{v.img}}" alt=""></div>
+                    <div class="info">
+                        <p class=txt>{{v.text}}</p>
+                    </div>
+                </a>
+                <div class="comment">
+                    <div class="com_title clearfix">
+                        <div class="user fl">{{v.comName}}</div>
+                        <div class="time fr">{{v.comTime}}</div>
+                        <div class="start">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                    <div class="text">{{v.comContent}}</div>
+                </div>
+            </div>
+
+
+
+        {{/each}}
+    </script>
+
+    <script src="lib/jquery/jquery-1.12.4.js"></script>
+    <script src="lib/flexible/flexible.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/brand.js"></script>
+
+</body>
+
+</html>

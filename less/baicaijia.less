@@ -1,0 +1,196 @@
+@import 'base.less';
+@import 'normalize.less';
+@import 'common.less';
+
+// 头部
+.m_header {
+    width: 100%;
+    height: 1.33rem;
+    background-color: #F4483E;
+    position: relative;
+    .header {
+        width: 100%;
+        height:1.33rem;
+        font-size: .57rem;
+        color:#fff;
+        text-align: center;
+        line-height: 1.33rem;
+        &::after {
+            content:"";
+            width: .91rem;
+            height: .91rem;
+            background: url(../images/header_app.png ) no-repeat;
+            background-size: .91rem .91rem;
+            position: absolute;
+            top: 15px;
+            right: .27rem;
+        }
+    }
+    a{
+        position: absolute;
+        top:0;
+        left:0;
+        width: 1.07rem;
+        height: 1.33rem;
+        padding: .4rem;
+        i{
+            font-size: .53rem;
+            color:#fff;
+        }
+    }
+}
+
+// 导航
+.nav{
+    width: 100%;
+    height: 1.07rem;
+    background-color: #fff;
+    position: relative;
+    #wrapper{
+        width: 90%;
+        height: 100%;
+        border-right: .01rem solid #ccc;
+        overflow: hidden;
+        ul{
+            width: 21.33rem;
+            height: 100%;
+            position: relative;
+            li{
+                float: left;
+                padding:0 .33rem;
+                height: 1.07rem;
+                line-height: 1.07rem;
+                border-bottom: .07rem solid #fff;
+                a{
+                    width: 100%;
+                    height: 100%;
+                    font-size: .4rem;
+
+                }
+            }
+
+        }
+    }
+    i{
+        height: 1.1rem;
+        width: 10%;
+        position: absolute;
+        top: .13rem;
+        right: -0.19rem;
+        font-size: .8rem;
+        color: #585757;
+        background-color: #f4f4f4;
+        background:url(../images/icon_search.svg) no-repeat;
+        background-size: .67rem .8rem;
+
+    }
+}
+
+// 产品
+.product{
+    width: 100%;
+    // background-color: #fff;
+    padding: .13rem 0;
+    .item{
+        // height: 4rem;
+        width: 100%;
+        margin-top: .13rem;
+        // padding: 0  .13rem;
+        img{
+            width: 3.47rem;
+            height: 3.47rem;
+
+        }
+        .info{
+            // width: 6.55rem;
+            overflow: hidden;
+            height: 3.47rem;
+            position: relative;
+            background-color: #fff;
+            padding:0 .13rem;
+            h4{
+                font-size: .32rem;
+                font-weight: 400;
+                padding-top: .13rem;
+            }
+            .price{
+                color:#FC353A;
+                font-size: .45rem;
+                padding: .27rem 0;
+                i{
+                    font-size: .4rem;
+                    color:#FC353A;
+                }
+                em{
+                    color:#FC353A;
+                    font-size: .27rem;
+                }
+                del{
+                    color:#666;
+                    font-size: .27rem;
+                }
+            }
+            .bar{
+                // padding-bottom: .13rem;
+                i{
+                    display:inline-block;
+                    width: 2.2rem;
+                    height: .37rem;
+                    background-color: #FFB7B7;
+                    border: .01rem solid #FC353A;
+                    text-align: center;
+                    position: relative;
+                    border-radius: .07rem;
+                    overflow: hidden;
+                    line-height: .9em;
+                    vertical-align: middle;
+                    em{
+                        height: .37rem;
+                        width: .01rem;
+                        background-color:#FC353A;
+                        float: left;
+                    }
+                    span{
+                        color:#fff;
+                        font-size: .29rem;
+                        position: absolute;
+                        top: 0;
+                        left:.87rem;
+                    }
+                }
+                b{
+                    font-size: .32rem;
+                    color:#FC353A;
+                    margin-left: .27rem;
+                }
+            }
+            .ticket{
+                width: 2.87rem;
+                height: .67rem;
+                margin-top: .27rem;
+                border: .01rem dashed #FC353A;
+                line-height: .67rem;
+                text-align: center;
+                a{
+                    font-size: .32rem;
+                    color:#FC353A;
+                }
+            }
+            .link{
+                position: absolute;
+                bottom:0;
+                right:.13rem;
+                width: 1.53rem;
+                height: .8rem;
+                line-height: .8rem;
+                text-align: center;
+                border-radius: .13rem;
+                background-color: #FC353A;
+                a{
+                    color:#fff;
+                    font-size: .35rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/bijia.css">
+    <title>比价页</title>
+</head>
+
+<body>
+    <div class="m_container">
+        <!-- 头部 -->
+        <div class="m_header clearfix">
+            <div class="left fl"></div>
+            <div class="right fr"></div>
+        </div>
+        <!-- 搜索 -->
+        <div class="m_search">
+            <div class="right">搜索</div>
+            <div class="left"><input type="text" placeholder="请输入你想比价的商品"></div>
+        </div>
+        <!-- 导航 -->
+        <div class="nav">
+            <button class="right">筛选</button>
+            <div class="left">
+                <!-- 坑 -->
+                <a href="index.html">首页></a>
+                <a href="category.html">全部分类></a>
+                <a href="#">空调></a>
+
+            </div>
+        </div>
+        <!-- 产品 -->
+        <div class="product">
+            <div class="product_name">
+                <h3>乐视啊是个电视乐视啊是个电视乐视啊是个电视乐视啊是个电视乐视啊是个电视</h3>
+                <a href="#"><img src="images/Thumb_2016060015515937123.png" alt=""></a>
+                 <!-- collect注释 -->
+                 <div class="collect">收藏</div>
+            </div>
+            <div class="info">
+                <a href="#" class="organe">比价购买</a>
+                <a href="#">产品参数</a>
+                <a href="#">评价（2322）</a>
+            </div>
+
+
+            <div class="buy clearfix">
+                <div class="right " id="price">
+                    <!-- <span class="price ">￥1999.00</span>
+                    <span class="go_buy">去购买</span>
+
+                </div>
+                <div class="left">
+                    <i></i>
+                    <span>京东商城</span> -->
+                </div>
+
+
+            </div>
+            <p>*实际价格以个网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</p>
+        </div>
+
+        <!-- 评价 -->
+        <div class="m_comContent">
+            <div class="title">网友评价</div>
+            <div class="info" id="com">
+                <!--坑 -->
+                <!-- <div class="item">
+                    <div class="top clearfix">
+                        <div class="user fl">王二狗</div>
+                        <div class="time fr">2018/12/5</div>
+                    </div>
+                    <div class="form clearfix"><span class="fr">购买自：。。。</span></div>
+
+                    <p>据说挺好的据说挺好的据说挺好的据说挺好的据说挺好的据说挺好的据说挺好的据说挺好的据说挺好的据说挺好的据说挺好的据说挺好的据说挺好的据说挺好的据说挺好的据说挺好的据说挺好的据说挺好的据说挺好的据说挺好的据说挺好的据说挺好的据说挺好的据说挺好的据说挺好的据说挺好的据说挺好的据说挺好的据说挺好的据说挺好的据说挺好的据说挺好的</p>
+                </div> -->
+            </div>
+
+        </div>
+
+        <!-- 更多评价 -->
+        <div class="more">
+            <a href="#">查看更多评价</a>
+        </div>
+
+        <!-- 底部 -->
+        <div class="m_footer">
+            <ul class="clearfix">
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
+                <li class="top"><a href="#">返回顶部</a></li>
+            </ul>
+            <div class="footer">
+                <div>
+                    <span class="left">手机APP下载</span>
+                    <span class="center">慢慢买手机版</span>
+                    <span class="right">--掌上比价平台</span>
+                </div>
+                <p>m.maimaimaibuy.com</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- 导航填 -->
+        <script type="text/html" id="listTpl">
+            {{ each result v i }}
+                <a href="index.html">首页></a>
+                <a href="productlist.html?categoryid={{ v.categoryId}}">{{v.category}}></a>
+                <a href="#" data-categoryId="{{v.categoryId}}">{{v.category}}></a>
+        {{ /each}}
+        </script>
+
+        <!-- 产品填 -->
+        <script type="text/html" id="productTpl">
+            {{ each result v i }}
+                <h3>{{v.productName}}</h3>
+                <a href="#">{{@v.productImg}}</a>
+                <div class="collect">收藏</div>
+            {{ /each}}
+        </script>
+
+        <script type="text/template" id="price_tmp">
+            {{@result[0].bjShop}}
+        </script>
+
+
+
+        <!-- 评论填 -->
+        <script type="text/html" id="comTpl">
+            {{each result v i}}
+            <div class="item">
+            <div class="top clearfix">
+                <div class="user fl">{{v.comName}}</div>
+                <div class="time fr">{{v.comTime}}</div>
+            </div>
+            <div class="form clearfix"><span class="fr">{{v.comFrom}}</span></div>
+
+            <p>{{v.comContent}}</p>
+        </div>
+            {{/each}}
+        </script>
+
+        <script src="lib/jquery/jquery-1.12.4.js"></script>
+        <script src="lib/flexible/flexible.js"></script>
+        <script src="lib/artTemplate/template-web.js"></script>
+        <script src="js/common.js"></script>
+        <script src="js/bijia.js"></script>
+
+
+</body>
+
+</html>

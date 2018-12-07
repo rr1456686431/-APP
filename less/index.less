@@ -1,0 +1,119 @@
+@import 'base.less';
+@import 'normalize.less';
+@import 'common.less';
+
+.m_header {
+    width: 100%;
+    height: 1.33rem;
+    background-color: #FF841D;
+    padding: 0 .13rem;
+    .left {
+        width: 4.95rem;
+        height: .67rem;
+        background: url(../images/header_logo.png) no-repeat;
+        background-size:4.95rem .67rem;
+        margin-top: .33rem;
+    }
+    .right {
+        width: .91rem;
+        height: .91rem;
+        background: url(../images/header_app.png ) no-repeat;
+        background-size: .91rem .91rem;
+        margin-top: .27rem;
+    }
+}
+
+// 导航
+.m_nav {
+    width: 100%; // background-color: gold;
+    li {
+        width: 25%;
+        float: left;
+        a{
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        img {
+            height: 1.33rem;
+            width: 1.33rem;
+            margin: 0 auto;
+        }
+        p {
+            height: .4rem;
+            line-height: .4rem;
+            text-align: center;
+            margin: .13rem 0;
+            font-size: .24rem;
+        }
+    }
+}
+
+.m_product {
+    width: 100%;
+    padding-top: .13rem;
+    background-color: #fff;
+    
+    .product {
+        width: 100%;
+        .item{
+            height: 3.47rem;
+            width: 100%;
+            border-bottom:1px solid #ccc;
+            a{
+                width: 100%;
+                height: 100%;
+                display:block;
+                padding: .27rem;
+                .img{
+                    float: left;
+                    padding: .27rem;
+                    width: 2.67rem;
+                    height: 2.67rem;
+                    display: block;
+
+                }
+                .info{
+                    overflow: hidden;
+                    height: 3.47rem;
+                    padding: .4rem;
+                    .top{
+                        padding-top: .27rem;
+                        font-size: .36rem;
+                    }
+                    .price{
+                        font-size: .29rem;
+                        color:#FF6613;
+                    }
+                    .bottom{
+                        padding-top: .4rem;
+                        color:#ccc;
+                        font-size: .27rem;
+                    }
+                }
+            }
+        }
+    }
+   
+}
+
+.title {
+    width: 100%;
+    height: .93rem;
+    background-color: #FFA42C;
+    padding: 0 .27rem;
+    .left {
+        font-size: .44rem;
+        color: #fff;
+        height: .93rem;
+        line-height: .93rem;
+        text-align: center;
+    }
+    .right {
+        width: .53rem;
+        height: .53rem;
+        margin-top: .2rem;
+        background: url(../images/more.png) no-repeat;
+        background-size: .53rem .53rem;
+    }
+}

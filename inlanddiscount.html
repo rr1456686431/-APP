@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/inlanddiscount.css">
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <title>国内折扣</title>
+</head>
+
+<body>
+    <div class="m_container">
+        <!-- 头部 -->
+        <div class="m_header clearfix">
+            <a href="index.html"><i class="fa fa-chevron-left"></i></a>
+            <div class="header ">国内折扣</div>
+        </div>
+
+        <!-- 产品区 -->
+        <div class="product">
+            <!-- <div class="item">
+                <a href="#">
+                    <div class="img">
+                        <img src="images/Thumb_2016060015515937123.png" alt="">
+                    </div>
+                    <h3 class="mult_line_ellipsis">safsdfsd</h3>
+                    <p class="red">fjaskjfnsjk</p>
+                    <p class="small">
+                        <span>京东 |</span>
+                        <span>2018-12-05 19:55:07</span>
+                    </p>
+                </a>
+            </div> -->
+        </div>
+   
+
+
+
+
+
+        <!-- 底部 -->
+        <div class="m_footer">
+            <ul class="clearfix">
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
+                <li class="top"><a href="#" id="#backBtn">返回顶部</a></li>
+            </ul>
+            <div class="footer">
+                <div>
+                    <span class="left">手机APP下载</span>
+                    <span class="center">慢慢买手机版</span>
+                    <span class="right">--掌上比价平台</span>
+                </div>
+                <p>m.maimaimaibuy.com</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="text/html" id="productTpl">
+        {{each result v i }}
+        <div class="item">
+            <a href="discount.html?productId={{v.productId}}" data-productId="{{v.productId}}">
+                <div class="img">
+                    {{@v.productImg}}
+                </div>
+                <h3 class="mult_line_ellipsis">{{v.productName}}</h3>
+                <p class="red">{{v.productPrice}}</p>
+                <div class="small">
+                    <span>{{v.productFrom}} |</span>
+                    <span>{{v.productTime}}</span>
+                </div>
+            </a>      
+        </div>
+        {{/each}}
+    </script>
+
+
+
+    <script src="./lib/jquery/jquery-1.12.4.js"></script>
+    <script src="lib/flexible/flexible.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/inlanddiscount.js"></script>
+
+
+</body>
+
+</html>

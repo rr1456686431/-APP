@@ -1,0 +1,88 @@
+@import 'base.less';
+@import 'normalize.less';
+@import 'common.less';
+
+body{
+    background-color: #fff;
+}
+// 头部
+.m_header {
+    width: 100%;
+    height: 1.33rem;
+    background-color: #FF841D;
+    padding: 0 .13rem;
+    .left {
+        width: 4.95rem;
+        height: .67rem;
+        background: url(../images/header_logo.png) no-repeat;
+        background-size:4.95rem .67rem;
+        margin-top: .33rem;
+    }
+    .right {
+        width: .91rem;
+        height: .91rem;
+        background: url(../images/header_app.png ) no-repeat;
+        background-size: .91rem .91rem;
+        margin-top: .27rem;
+    }
+}
+
+
+// 导航
+.m_nav{
+    width: 100%;
+    background-color: #EDEDED;
+    height: 1rem;
+    padding:0 .27rem;
+    border-top: .01rem solid #ccc;
+    border-bottom: .01rem solid #ccc;
+    a{
+        line-height: 1rem;
+        font-size: .35rem;
+        display: inline-block;
+        height: 1rem;
+
+    }
+}
+
+// 标题
+.title{
+    margin: .13rem;
+    height: 1rem;
+    line-height: 1rem;
+    background-color: #EEEEEE;
+    color:#862608;
+    font-size: .4rem;
+    padding: 0 .27rem;
+    border: .01rem solid #ccc;
+
+}
+
+// 内容
+.brandTitle{
+    border: .01rem solid #ccc;
+    border-radius: .13rem;
+    li{
+        height: 1.07rem;
+        padding: 0 .27rem;
+        line-height: 1.07rem;
+        font-size: 32px;
+        border-bottom: .01rem solid #ccc;
+        font-weight: 700;
+        position: relative;
+        a{
+            width: 100%;
+            height: 1.07rem;
+            display: block;
+        }
+        i{
+            position:absolute;
+            top: .29rem;
+            right: .27rem;
+        }
+    }
+    li:last-child{
+        border-bottom:none;
+    }
+
+}

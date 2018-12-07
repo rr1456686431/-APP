@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/discount.css">
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <title>商品列表</title>
+</head>
+
+<body>
+    <div class="m_container">
+        <!-- 头部 -->
+        <div class="m_header clearfix">
+            <a href="javascript:history.back();"><i class="fa fa-chevron-left"></i></a>
+            <div class="header ">国内折扣</div>
+        </div>
+        <div class="content">
+            <!-- 这里是个坑 -->
+        </div>
+
+        <!-- 购买按钮 -->
+        <div class="go_buy">
+            <a href="#">前往购买</a>
+        </div>
+
+        <!-- 二维码 -->
+        <div class="app_img">
+            <img src="images/mmbweixin2.png" alt="">
+        </div>
+
+        <!-- 评论 -->
+        <div class="new_com">
+            <!--天坑 -->
+        </div>
+
+
+
+        <!-- 底部 -->
+        <div class="m_footer">
+            <ul class="clearfix">
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
+                <li class="top"><a href="#" id="#backBtn">返回顶部</a></li>
+            </ul>
+            <div class="footer">
+                <div>
+                    <span class="left">手机APP下载</span>
+                    <span class="center">慢慢买手机版</span>
+                    <span class="right">--掌上比价平台</span>
+                </div>
+                <p>m.maimaimaibuy.com</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 填坑 -->
+    <script type="text/html" id="productTpl">
+        <!-- 标题 -->
+        <div class="m_title">
+            <h3 class="ellipsis">{{result[0].productName}}</h3>
+            <div class="price">{{result[0].productPrice}}</div>
+            <div class="s_title">
+                <span>{{result[0].productFrom}}</span>
+                <span>{{result[0].productTime}}</span>
+                <span>{{result[0].productTips}}</span>
+            </div>
+        </div>
+
+        <!-- 内容 -->
+        <div class="main">
+            <div class="info clearfix">
+                <div class="right fr">
+                    <img src="images/hua.jpg" alt="">
+                </div>
+                <div class="left">{{result[0].productInfo}}</div>
+            </div>
+            <p>{{result[0].productInfo1}}</p>
+            <div class="big_img">{{@result[0].productImg}}</div>
+        </div>      
+    </script>
+
+    <!-- 填坑 -->
+    <script type="text/html" id="newTpl">
+        {{@result[0].productComment}}        
+    </script>
+
+    <script src="lib/jquery/jquery-1.12.4.js"></script>
+    <script src="lib/flexible/flexible.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/discount.js"></script>
+
+
+</body>
+
+</html>

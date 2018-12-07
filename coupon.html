@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/coupon.css">
+    <title>优惠券</title>
+</head>
+
+<body>
+    <div class="m_container">
+        <!-- 头部 -->
+        <div class="m_header clearfix">
+            <div class="header ">优惠券</div>
+        </div>
+        
+        <!-- 导航 -->
+        <div class="nav">
+            <a href="index.html">首页></a>
+            <a href="javascript:;">优惠券</a>
+        </div>
+
+        <!-- 产品 -->
+        <div class="product clearfix">
+            <!-- 坑 -->
+            <!-- <div class="item">
+                <a href="#">
+                    <div class="img">
+                        <img src="" alt="">
+                    </div>
+                    <p></p>
+                </a>
+            </div>
+                -->
+        </div>
+
+        <!-- 底部 -->
+        <div class="m_footer">
+            <ul class="clearfix">
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
+                <li class="top"><a href="#" id="#backBtn">返回顶部</a></li>
+            </ul>
+            <div class="footer">
+                <div>
+                    <span class="left">手机APP下载</span>
+                    <span class="center">慢慢买手机版</span>
+                    <span class="right">--掌上比价平台</span>
+                </div>
+                <p>m.maimaimaibuy.com</p>
+            </div>
+        </div>
+    </div>
+
+<!-- 产品坑 -->
+    <script type="text/html" id="productTpl">
+    {{each result v i }}
+        <div class="item" data-couponId="{{v.couponId}}">
+            <a href="{{v.couponLink}}?couponId={{v.couponId}}">
+                <div class="img">
+                    <img src="{{v.couponImg}}" alt="">
+                </div>
+                <p>{{v.couponTitle}}</p>
+            </a>
+        </div>
+    {{/each}}
+    </script>
+
+    <script src="lib/jquery/jquery-1.12.4.js"></script>
+    <script src="lib/flexible/flexible.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/coupon.js"></script>
+
+</body>
+
+</html>

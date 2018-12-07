@@ -1,0 +1,228 @@
+@import 'base.less';
+@import 'normalize.less';
+@import 'common.less';
+
+// 头部
+.m_header {
+    width: 100%;
+    height: 1.33rem;
+    background-color: #FF841D;
+    position: relative;
+
+    .header {
+        width: 100%;
+        height:1.33rem;
+        font-size: .57rem;
+        color:#fff;
+        text-align: center;
+        line-height: 1.33rem;
+        &::after {
+            content:"";
+            width: .91rem;
+            height: .91rem;
+            background: url(../images/header_app.png ) no-repeat;
+            background-size: .91rem .91rem;
+            position: absolute;
+            top: 15px;
+            right: .27rem;
+        }
+    }
+    a{
+        position: absolute;
+        top:0;
+        left:0;
+        width: 1.07rem;
+        height: 1.33rem;
+        padding: .4rem;
+        i{
+            font-size: .53rem;
+            color:#fff;
+        }
+    }
+}
+// 标题
+.m_title{
+    width: 100%;
+    padding:0 .27rem;
+    background-color: #fff;
+    h3{
+        font-size: .48rem;
+        height: .93rem;
+        line-height: .93rem;
+        text-align: center;
+
+    }
+    .s_title{
+        width: 100%;
+        height: .8rem;
+        color:#666;
+        font-size: .27rem;
+    }
+    
+}
+// 内容
+.main{
+    background-color: #fff;
+    padding: 0 .27rem;
+
+   
+    .info{
+        width: 100%;
+        // height: 4.67rem;
+        .left{
+            overflow: hidden;
+            font-size: .4rem;
+            color:#666;
+        }               
+        img{
+            width: 3.53rem;
+            height: 3.53rem;
+            margin-left: .4rem;
+
+        }        
+    }
+    p{
+        font-size: .4rem;
+            color:#666;
+    }
+}
+
+// 列表
+.box{
+    width: 100%;
+    // height: 100%;
+    padding: .67rem 0;
+    background-color: #fff;
+    ul{
+        width: 3.73rem;
+        
+        margin:0 auto;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        padding:0 .27rem;
+        padding-bottom:.27rem;
+        li{
+            border-bottom: 1px dashed #ccc;
+            height: .53rem;
+            line-height: .53rem;
+            span{
+                padding:0 .27rem;
+                font-size: .29rem;
+            }
+            strong{
+                color:#F37D21;
+                float: right;
+                font-weight: normal;
+            }
+        }
+    }
+
+}
+
+// 购买按钮
+.go_buy{
+    padding: 0 .73rem;
+    width: 100%;
+    background-color: #fff;
+    a{
+        width: 100%;
+        display: block;
+        height: .8rem;
+        background-color: #FF9000;
+        color:#fff;
+        line-height: .8rem;
+        font-size: .35rem;
+        text-align: center;
+        border-radius: .13rem;
+    }
+}
+
+// 二维码
+.app_img{
+    padding-top: 1.2rem;
+    background-color: #fff;
+    margin-bottom: .27rem;
+}
+
+// 评论
+.new_com{
+    background-color: #fff;
+    .tit{
+        font-size: .32rem;
+        margin-bottom: .13rem;
+        background-color: #fff;
+        padding:0 .4rem;
+    }
+    .reply{
+        width: 100%;
+        height: 2.87rem;
+        padding: .13rem;
+        .form{
+            width: 100%;
+            height: 100%;
+            border: .03rem solid #c4c4c4;
+            border-radius: .07rem;
+            textarea{
+                width: 100%;
+                height: 1.93rem;
+            }
+            input{
+                line-height: normal;
+            }
+        }
+        .ctrl{
+            overflow: hidden;
+            border-top: .01rem solid #f2f2f2;
+            input{
+                float: right;
+                width: 1.73rem;
+                height: .56rem;
+                background-color: #ff841d;
+                color: #fff;
+                border: 0;
+                font-size: .3rem;
+            }
+        }
+    }
+    li{
+        overflow: hidden;
+        height: 2.67rem;
+        background-color: #fff;
+        padding: 0 .4rem;
+        .userimg{
+            float: left;
+            img{
+                float: left;
+                width: 1.12rem;
+                height: 1.12rem;
+                border-radius: 50%;
+            }
+        }
+        .con{
+            padding-top: .2rem;
+            padding-left: .13rem;
+            overflow: hidden;
+            font-size: .21rem;
+            .name{
+                .username{
+                    float: left;
+                    color: #4a86c2;
+                }
+                .time{
+                    float: right;
+                    color: #7e7f97;
+                }
+            }
+            .content{
+                padding-top: .13rem;
+                font-size: .24rem;
+                img{
+                    width: .29rem;
+                    height: .29rem;
+                }
+            }
+        }
+    
+    }
+}
+

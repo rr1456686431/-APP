@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>首页</title>
+</head>
+
+<body>
+    <div class="m_container">
+        <!-- 头部 -->
+        <div class="m_header clearfix" id="backBtn">
+            <div class="left fl"></div>
+            <div class="right fr"></div>
+        </div>
+        <!-- 搜索 -->
+        <div class="m_search">
+            <div class="right">搜索</div>
+            <div class="left"><input type="text" placeholder="请输入你想比价的商品"></div>
+        </div>
+        <!-- 导航 -->
+        <div class="m_nav mt_15">
+            <ul class="clearfix nav">
+               <!-- 挖个坑 -->
+            </ul>
+        </div>
+        
+        <!-- 超值折扣推荐 -->
+        <div class="m_product ">
+            <div class="title clearfix">
+                <a href="#">
+                    <div class="left fl">超级折扣推荐</div>
+                    <div class="right fr"></div>
+                </a>
+            </div>
+            <div class="product">
+                <!-- 挖坑 -->
+                
+            </div>
+
+            <div class="more">
+                <a href="#">更多优惠信息>></a>
+            </div>
+        </div>
+
+        <!-- 品牌排行 -->
+        <div class="brand mt_20">
+            <div class="title clearfix">
+                <a href="#">
+                    <div class="left fl">品牌排行</div>
+                    <div class="right fr"></div>
+                </a>
+            </div>
+        </div>
+        <!-- 底部 -->
+        <div class="m_footer">
+            <ul class="clearfix">
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
+                <li class="top"><a href="#" id="#backBtn">返回顶部</a></li>
+            </ul>
+            <div class="footer">
+                <div>
+                    <span class="left">手机APP下载</span>
+                    <span class="center">慢慢买手机版</span>
+                    <span class="right">--掌上比价平台</span>
+                </div>
+                <p>m.maimaimaibuy.com</p>
+            </div>
+        </div>
+
+        <!-- @说是插件的问题 -->
+        <script type="text/html" id="navTpl">
+            {{ each result v i }}
+                <li><a href="{{v.titlehref}}" data-id="{{v.indexmenuId}}">{{@v.img}}
+                    <p>{{v.name}}</p>
+                 </a></li>
+             {{ /each }} 
+        </script>
+
+
+        <script type="text/html" id="productTpl">
+            {{each result v i }}
+            <div class="item">
+                <a href="moneyproduct.html?productId={{v.productId}}">
+                    <div class="img ">{{@ v.productImgSm }}</div>
+                    <div class="info">
+                        <p class="top">{{v.productName}}</p>
+                        <p class="price">{{v.productPinkage}}</p>
+                        <p class="bottom">京东商城|{{v.productTime}} <span class="fr">{{v.productComCount}}</span> </p>
+                    </div>
+                </a>
+            </div>
+            {{/each}}
+        
+        </script>
+
+
+
+        <script src="lib/jquery/jquery-1.12.4.js"></script>
+        <script src="lib/flexible/flexible.js"></script>
+        <script src="lib/artTemplate/template-web.js"></script>
+        <script src="js/index.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/baicaijia.css">
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <title>白菜价-淘宝内部券</title>
+</head>
+
+<body>
+    <div class="m_container">
+        <!-- 头部 -->
+        <div class="m_header clearfix">
+            <a href="index.html"><i class="fa fa-chevron-left"></i></a>
+            <div class="header ">白菜价-淘宝内部券</div>
+        </div>
+
+        <!-- 导航栏 -->
+        <div class="nav">
+            <div id="wrapper">
+                <ul class="clearfix">
+                    <!-- 挖个坑 -->
+                    <!-- <li><a href="#">11</a></li> -->
+                </ul>
+            </div>
+            <i></i>
+        </div>
+
+        <!-- 产品 -->
+        <div class="product">
+            <!-- 坑 -->
+            <!-- <div class="item clearfix">
+                <div class="img fl">
+                    <img src="images/productctrl.jpg" alt="">
+                </div>
+                <div class="info ">
+                    <h4 class="mult_line_ellipsis">标题深刻的粉丝就发你手机标题深刻的粉丝就发你手机标题深刻的粉丝就发你手机</h4>
+                    <div class="price">
+                        <i>券后</i>
+                        <em>￥</em>
+                        106.0
+                        <del>￥206</del>
+                    </div>
+                    <div class="bar">
+                        <a href="#">
+                           <i>
+                            //浮动
+                            <em style="width:30%"></em>
+                            //定位，定位可以盖浮动
+                            <span>30%</span>
+                           </i>
+                            <b>已领1000张</b>
+                        </a>
+                    </div>
+                    <div class="ticket">
+                        <a href="#">点击领券</a>
+                    </div>
+                    <div class="link"><a href="#">下单链接</a></div>
+                </div>
+            </div> -->
+        </div>
+
+        <!-- 小火箭 -->
+        <div class="rocket">
+            
+        </div>
+
+
+        <!-- 底部 -->
+        <div class="m_footer">
+            <ul class="clearfix">
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
+                <li class="top"><a href="#" id="#backBtn">返回顶部</a></li>
+            </ul>
+            <div class="footer">
+                <div>
+                    <span class="left">手机APP下载</span>
+                    <span class="center">慢慢买手机版</span>
+                    <span class="right">--掌上比价平台</span>
+                </div>
+                <p>m.maimaimaibuy.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <script type="text/html" id="navTpl">
+        {{each result v i}}
+            <li data-titleid="{{v.titleId}}" ><a href="javascript:;" >{{v.title}}</a></li>
+        {{/each}}
+    </script>
+
+<!-- 产品坑 -->
+    <script type="text/html" id="productTpl">
+    {{each result v i }}
+        <div class="item clearfix" data-productId="{{v.productId}}">
+            <div class="img fl">{{@v.productImg}}</div>
+            <div class="info ">
+                <h4 class="mult_line_ellipsis">{{@v.productName}}</h4>
+                <div class="price">{{@v.productPrice}}</div>
+                <div class="bar">{{@v.productCouponRemain}}</div>
+                <div class="ticket">{{@v.productCoupon}}</div>
+                <div class="link">{{@v.productHref}}</div>
+            </div>
+        </div>    
+    {{/each}}
+    </script>
+
+    <script src="lib/jquery/jquery-1.12.4.js"></script>
+    <script src="lib/flexible/flexible.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="lib/iscroll/iscroll.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/baicaijia.js"></script>
+
+    <!-- 初始化导航栏滚动 -->
+    <script type="text/javascript">
+        var myScroll = new IScroll('#wrapper',{
+            scrollX: true,
+            scrollY: false
+        });
+    </script>
+</body>
+
+</html>

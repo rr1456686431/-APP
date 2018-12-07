@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/category.css">
+    <title>分类页</title>
+</head>
+
+<body>
+    <div class="m_container">
+        <!-- 头部 -->
+        <div class="m_header clearfix" id="backBtn">
+            <div class="left fl"></div>
+            <div class="right fr"></div>
+        </div>
+        <!-- 搜索 -->
+        <div class="m_search">
+            <div class="right">搜索</div>
+            <div class="left"><input type="text" placeholder="请输入你想比价的商品"></div>
+        </div>
+
+        <!-- 分类页 -->
+
+        <div class="categotry">
+            <ul id="category">
+                <!-- 父列表 -->
+                <!-- 坑 -->
+              
+
+        </div>
+
+
+
+        <!-- 底部 -->
+        <div class="m_footer">
+            <ul class="clearfix">
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
+                <li class="top"><a href="#" id="#backBtn">返回顶部</a></li>
+            </ul>
+            <div class="footer">
+                <div>
+                    <span class="left">手机APP下载</span>
+                    <span class="center">慢慢买手机版</span>
+                    <span class="right">--掌上比价平台</span>
+                </div>
+                <p>m.maimaimaibuy.com</p>
+            </div>
+        </div>
+
+        <!-- 填 -->
+        <script type="text/html" id="topTpl">
+            {{ each result v i }}
+            <li class="title clearfix">
+                <i class="right fr" ></i>
+                <a href="javascript:;" class=" father" data-id ="{{v.titleId}}">{{v.title}}</a>
+                <!-- 子列表 -->
+                <ul class="clearfix son move">
+                    <li class="sun"><a href="#">电视</a></li>
+                    
+                </ul>
+            </li>
+            {{/each}}
+        </script>
+
+
+        <script type="text/html" id = "cate_tmp">
+
+            {{each result v i}}
+                <li class="sun"><a href="productlist.html?categoryid={{ v.categoryId}}">{{v.category}}</a></li>             
+            {{/each}}
+            
+        </script>
+
+
+
+        <script src="lib/jquery/jquery-1.12.4.js"></script>
+        <script src="lib/flexible/flexible.js"></script>
+        <script src="lib/artTemplate/template-web.js"></script>
+        <script src="js/category.js"></script>
+
+</body>
+
+</html>
